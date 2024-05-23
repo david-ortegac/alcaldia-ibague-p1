@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Department
@@ -16,13 +17,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property $updated_at
  *
  * @property User $chiefManager
- * @property User $createdBy
- * @property User $updatedBy
+ * @property User createdBy
+ * @property User updatedBy
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
 class Department extends Model
 {
+    use HasFactory;
 
     protected $perPage = 20;
 
